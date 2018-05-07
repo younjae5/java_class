@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ch08_ex1_Invoice/src/murach/invoice/InvoiceApp.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="murach.invoice.InvoiceApp"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ch08_ex1_Invoice"/>
+</launchConfiguration>

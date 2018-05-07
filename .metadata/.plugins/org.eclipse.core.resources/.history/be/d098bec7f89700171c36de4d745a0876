@@ -1,0 +1,54 @@
+// Younjae Oh
+// 학번: 20171651
+// Lab 1
+// Point Class 
+
+public class Point {
+	/* attribute */
+	private int x;
+	private int y;
+	
+	/* constructors */
+	
+	public Point() {
+		x = 0;
+		y = 0;
+					
+	}
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Point(int a) {
+		this.x = a;
+		this.y = a;
+	}
+	
+	/* set methods() */
+	
+	public void setX(int a) {
+		x = a;
+	}
+	
+	public void setY(int b) {
+		y = b;
+	}
+	
+	/*get methods*/
+	
+	public int getX() {
+		return x;
+	}
+	
+	public int getY() {
+		return y;
+	}
+	
+	/* toString() --> 시험에 내실거임 */
+	public String toString( ) { 
+		return("(x, y) = (" + this.getX() + ", " + this.getY() + ")");
+	}
+
+} //end of class

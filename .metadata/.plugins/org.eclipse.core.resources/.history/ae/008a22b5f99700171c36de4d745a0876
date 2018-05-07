@@ -1,0 +1,35 @@
+// Younjae Oh
+// 학번: 20171651
+// Lab 1
+// Point Class 사용사례 습득 
+
+public class PointDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Point p1 = new Point();
+		System.out.println(p1);
+		
+		Point p2 = new Point(150, 300);
+		System.out.println(p2);
+		
+		Point p3 = new Point(273);
+		System.out.println(p3);
+		
+		// 여러값의 setting 해보기
+		
+		p1.setX(7);
+		p2.setY(88);
+		
+		p2.setY(1500);
+		
+		p3.setX(522);
+		
+		System.out.println(p1);
+		System.out.println(p2);
+		System.out.println(p3);
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package murach.games;
+
+import java.util.Random;
+
+public class NumberGame {
+  int number = ;
+  
+  
+  public NumberGame() {
+    
+  }
+
+}

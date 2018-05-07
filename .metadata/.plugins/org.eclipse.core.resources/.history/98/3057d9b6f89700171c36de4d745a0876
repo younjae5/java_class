@@ -1,0 +1,21 @@
+// Younjae Oh
+// ÇÐ¹ø: 20171651
+// Lab 1
+// Point Class »ç¿ë»ç·Ê ½Àµæ 
+
+public class PointDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Point p1 = new Point();
+		System.out.println(p1);
+		
+		Point p2 = new Point(150, 300);
+		System.out.println(p2);
+		
+		Point p3 = new Point(273);
+		System.out.println(p3);
+	}
+
+}
