@@ -1,6 +1,6 @@
 package murach.games;
 
-import java.util.Random;
+//import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -13,31 +13,41 @@ public class Main {
 
         // Get upper limit
         System.out.print("Enter the upper limit for the number: ");
-        int upperLimit = Integer.parseInt(sc.nextLine());
+        NumberGame numberGame = new NumberGame(Integer.parseInt(sc.nextLine()));
+        int upperLimit = numberGame.getUpperLimit();
+        
+        
         System.out.println("OK, I'm thinking of a number between 0 and " +
                 upperLimit);
         System.out.println();
         
-        // Generate a random number between 0 and the upperLimit variable
-        Random random = new Random();
-        int number = random.nextInt(upperLimit - 1) + 1;
+        //int number = numberGame.getNumber();
         
-        int count = 1;
         System.out.print("Enter your guess: ");
         int guess = Integer.parseInt(sc.nextLine());
-        while (guess != number) {
-            if (guess < number) {
-                System.out.println("Your guess is too low.\n");
-            } else if (guess > number) {
-                System.out.println("Your guess is too high.\n");
-            }
-            count = count + 1;
-            System.out.print("Enter your guess: ");
-            guess = Integer.parseInt(sc.nextLine());
-        }        
+        
+        
+        //한번에 맞출경우 그냥 넘어가버림. 수정해야됨.
+        do {
+
+          int correctGuess = numberGame.isCorrectGuess(guess);
+          if (correctGuess == -1) {
+              System.out.println("Your guess is too low.\n");
+              
+          } else if (correctGuess == 1) {
+              System.out.println("Your guess is too high.\n");
+          }         
+
+          numberGame.incrementGuessCounter();
+          System.out.print("Enter your guess: ");
+          guess = Integer.parseInt(sc.nextLine());     
+          
+        }while (numberGame.isCorrectGuess(guess) != 0);
+        
+        
         System.out.println("Correct!\n");
         
-        System.out.println("You guessed the correct number in " + count +
+        System.out.println("You guessed the correct number in " + numberGame.getGuessCounter() +
                 " guesses.\n");
         System.out.println("Bye!");
         sc.close();
