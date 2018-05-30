@@ -1,9 +1,21 @@
 package homework_last;
-import java.util.Arrays;
 
 public class Three_Six_Nine {
-
   class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        String str = Integer.toString(n);
+        int len = str.length();
+        for(int i = 0; i < len; i++){
+            if(str.charAt(i) == '3' || str.charAt(i) == '6' || str.charAt(i) == '9'){
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
+
+  /*class Solution {
       public int solution(int n) {
           int answer = 0;
           String s = Integer.toString(n);
@@ -17,5 +29,5 @@ public class Three_Six_Nine {
           }
           return answer;
       }
-    }
+    }*/
 }
