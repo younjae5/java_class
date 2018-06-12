@@ -45,16 +45,21 @@ public class Examples {
         try {
             nullPointerException();
             arrayIndexException();
-        } catch(Exception e) {//catch(RuntimeException re)
-            System.out.println(e);            
+        } catch(RuntimeException re) {//catch(RuntimeException re)
+            System.out.println(re);            
         }
     }
     
     
-    
-    
-    
-    
+    public void throwCustomException() throws CustomException{
+        try {
+            nullPointerException();
+        } catch (NullPointerException npe){
+            throw new CustomException("Converting NPE to custom Exception");
+        } finally {
+            System.out.println("finally block execution");
+        }
+    }
     
     
     
@@ -62,9 +67,15 @@ public class Examples {
         Examples examples = new Examples();
         //examples.nullPointerException();
         //examples.arrayIndexException();
-        examples.handleNpe();
-        //examples.throwCustomException();
-        System.out.println("Code complete");
+        //examples.handleNpe();
+        try {
+            examples.throwCustomException(); //try to catch and handle it
+        } catch(CustomException ce) {
+            //RuntimeException re
+            //Exception e
+        } finally {
+            System.out.println("Code complete");
+        }
     }
 
 }
